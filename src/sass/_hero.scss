@@ -1,0 +1,70 @@
+/*
+ *hero
+ */
+.hero {
+  background-image: url('../img/hero__background.jpg');
+  background-position: center top;
+  background-color: black;
+  height: 100%;
+  position: relative;
+
+  &:before {
+    content: "";
+    display: block;
+    background: rgba(0,0,0,0.4);
+    background: linear-gradient(to right, rgba(0,0,0,0.8) , rgba(0,0,0,0.0));
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.hero__container {
+  height: 100%;
+}
+
+.hero__header {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  color: white;
+  padding-left: 3rem;
+
+  .primary {
+    font-size: 5rem;
+    font-weight: 700;
+    color: #eb1c24;//red
+    text-transform: uppercase;
+    transition: font-size 0.2s ease-in-out;
+
+    @media (max-width: 700px) {
+      font-size: 4rem;
+    }
+
+    @media (max-width: 500px) {
+      font-size: 3rem;
+    }
+  }
+
+  .secondary {
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+}
+
+.hero__footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem 0;
+  text-align: center;
+  color: white;
+  background-color: #eb1c24;// red
+  font-weight: 300;
+}
+

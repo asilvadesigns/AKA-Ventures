@@ -1,0 +1,27 @@
+.btn {
+  color: white;
+  border: 1px solid #eb1c24;
+  border-radius: 4px;
+  background-color: #eb1c24;//red
+  padding: 0.125rem 0.4rem 0.2rem;
+  font-size: 85%;
+  cursor: pointer;
+
+  &:hover {
+    background-color: mix(white, #eb1c24, 20%);
+  }
+}
+
+.btn--hero {
+  font-weight: 400;
+  color: #333;//red
+  border: 1px solid white;
+  background-color: white;//red
+  padding: 0.5rem 0.8rem .6rem;
+  //transition: box-shadow 0.2s ease-in-out;
+
+  &:hover {
+    background-color: white;
+    //box-shadow: inset 0px 2px 3px rgba(0,0,0,0.7);
+  }
+}

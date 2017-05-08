@@ -1,0 +1,656 @@
+$grid-gutter : 1rem;
+
+/*
+ *helpers
+ */
+@import 'utils';
+
+/*
+ *base
+ */
+@import 'reset';
+@import 'typography';
+
+/*
+ *components
+ */
+@import 'buttons';
+@import 'footer';
+@import 'forms';
+@import 'grid';
+@import 'hero';
+@import 'nav';
+
+/*
+ *zen scroll
+ */
+body, .smooth-container { scroll-behavior: smooth }
+
+/*
+ *section
+ */
+.section {
+  padding: 4rem 0;
+  position: relative;
+  overflow: hidden;
+
+  @media (min-width: 960px) {
+    min-height: 100%;
+  }
+}
+
+.section__wrapper {
+  position: relative;
+  z-index: 100;
+}
+
+.section__container {
+
+}
+
+.section__header {
+  text-align: center;
+  margin-bottom: 4rem;
+  color: #163b4d;//blue
+
+  hr {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .primary {
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+}
+
+.section__subheader {
+
+  .primary {
+    color: #eb1c24;//red
+    font-size: 1.4rem;
+  }
+}
+
+.section__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  &:before,
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
+
+  &:before {
+    z-index: 70;
+  }
+
+  &:after {
+    z-index: 50;
+  }
+}
+
+/*
+ *section shatterfund
+ */
+.section--thefund {
+  @media (max-width: 959px) {
+    padding-top: 30rem;
+  }
+
+  .section__header {
+    color: #163b4d;//blue
+  }
+
+  .section__wrapper {
+    @media (max-width: 959px) {
+      max-width: 30rem;
+      margin: 0 auto;
+    }
+  }
+
+  .section__background {
+    &:before,
+    &:after {
+      @media (min-width: 960px) {
+        width: 50%;
+      }
+      @media (max-width: 959px) {
+        height: 26rem;
+      }
+    }
+
+    &:before {
+      background: linear-gradient(to right, rgba(0,0,0,0.0), white);
+    }
+
+    &:after {
+      background: white;
+      background-image: url('../img/shatterfund__background.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+  }
+}
+
+/*
+ *section ourvalue
+ */
+.section--ourvalue {
+  color: white;
+  background-color: #163b4d;//blue
+
+  @media (max-width: 959px) {
+    .container {
+      max-width: 20rem;
+    }
+
+    .column {
+      margin-bottom: ($line-height * 2) * 1rem;
+    }
+  }
+
+  .section__header {
+    color: inherit;
+  }
+
+  .section__subheader {
+    & {
+      text-align: center;
+    }
+    .primary {
+      color: white;
+    }
+  }
+
+  .section__body {
+    max-width: 30rem;
+    margin: 0 auto;
+    margin-bottom: ($line-height * 4) * 1rem;
+  }
+
+  .column {
+    text-align: center;
+  }
+
+  @media (min-width: 960px) {
+    .panel {
+      max-width: 15rem;
+      margin: 0 auto;
+    }
+  }
+
+  .icon {
+    height: 6rem;
+  }
+}
+
+/*
+ *section whereweinvest
+ */
+.section--whereweinvest {
+  background-color: #f2f2f2;
+
+  @media (max-width: 959px) {
+    .container {
+      max-width: 30rem;
+    }
+
+    .column--7-12 {
+      margin-bottom: ($line-height * 4) * 1rem;
+    }
+  }
+
+  .svg {
+    text-align: center;
+  }
+
+  .icon {
+    max-width: 20rem;
+  }
+}
+
+/*
+ *section portfolio
+ */
+.section--portfolio {
+
+  @media (min-width: 960px) {
+    .column {
+      vertical-align: middle;
+      float: none;
+      display: inline-block;
+      margin-right: -5px;
+    }
+  }
+
+  .svg {
+    text-align: center;
+  }
+
+  .icon {
+    height: 4rem;
+  }
+
+  .icon--urbansitter { height: 10rem; }
+  .icon--glamsquad { height: 9rem; }
+  .icon--barnraiser { height: 5.5rem; }
+  .icon--kraus { height: 3rem; }
+  .icon--tmn { height: 3rem; }
+  .icon--onsecondthought { height: 3rem; }
+
+  @media (max-width: 959px) {
+    .icon--urbansitter,
+    .icon--glamsquad {
+      margin-top: ($line-height * 2) * -1rem;
+    }
+    .icon--barnraiser {
+      //margin-top: ($line-height * 2) * -1rem;
+    }
+    .icon--kraus {
+      margin-top: ($line-height * 2) * 1rem;
+    }
+    .icon--tmn {
+      margin-top: ($line-height * 2) * 1rem;
+    }
+    .icon--onsecondthought {
+      margin-top: ($line-height * 2) * 1rem;
+    }
+  }
+}
+
+/*
+ *section quotes
+ */
+.section--quotes {
+  background-image: url('../img/quotes__background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  .section__background {
+    &:before {
+      background-color: rgba(0,0,0,0.8);
+    }
+  }
+
+  blockquote {
+    color: white;
+    position: relative;
+
+    &:after,
+    &:before {
+      position: relative;
+      content: "";
+      display: block;
+      height: 2rem;
+      background-repeat: no-repeat;
+    }
+
+    &:before {
+      top: 1rem;
+      left: -5rem;
+      background-image: url(../img/leftquote.svg);
+      height: 3rem;
+    }
+
+    &:after {
+      right: -100%;
+      bottom: 1rem;
+      background-image: url('../img/rightquote.svg');
+    }
+
+    cite {
+      display: block;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #eb1c24;//red
+      margin-top: $line-height * 1rem;
+    }
+  }
+
+  .swiper-slide blockquote {
+    max-width: 40rem;
+    margin: 0 auto;
+    padding: 0 5rem;
+  }
+}
+
+/*
+ *section ourteam
+ */
+.section--ourteam {
+  color: white;
+  background-color: #163b4d;//blue
+
+  @media (max-width: 959px) {
+    .container {
+      max-width: 30rem;
+    }
+
+    img {
+      margin-bottom: $line-height * 1rem;
+    }
+  }
+
+  .section__header {
+    color: inherit;
+  }
+}
+
+/*
+ *section advisors
+ */
+.section--ouradvisors {
+  color: white;
+  //background-color: #132f3e;//dark blue
+
+  @media (max-width: 959px) {
+    .column--3-12 {
+      width: percentage(6/12);
+      float: left;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .column--3-12 {
+      width: 100%;
+      float: none;
+    }
+  }
+
+  .section__header {
+    color: inherit;
+  }
+}
+
+/*
+ *section shattersummit
+ */
+.section--shattersummit {
+  padding: 0;
+
+  @media (max-width: 959px) {
+    padding-top: 30rem;
+
+    .section__wrapper {
+      max-width: 30rem;
+      margin: 0 auto;
+    }
+  }
+
+  .section__header,
+  .section__body,
+  .section__footer {
+    padding: 0 4rem;
+  }
+
+  .section__header {
+    color: #eb1c24;//red
+    text-align: left !important;
+    padding-top: 4rem;
+
+    hr {
+      margin-left: 0;
+    }
+  }
+
+  .split-text {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: percentage(7/12);
+    transform: translateY(-50%);
+    color: white;
+
+    @media (max-width: 959px) {
+      width: 100%;
+      top: -17rem;
+
+      .column {
+        float: left;
+      }
+
+      .column--6-12 {
+        width: percentage(6/12);
+      }
+    }
+
+    .row {
+      width: 100%;
+      margin: 0;
+    }
+
+    .column:first-child {
+      text-align: right;
+      border-right: 1px solid white;
+    }
+
+    h3 {
+      font-size: 1.4rem;
+    }
+  }
+
+  @media (max-width: 959px) {
+    .column--5-12 {
+      margin-top: -5rem;
+    }
+  }
+
+  .section__body {
+    padding-bottom: 4rem;
+  }
+
+  .section__footer {
+    background-color: #f2f2f2;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .section__background {
+    &:before,
+    &:after {
+      @media (min-width: 960px) {
+        width: percentage(7/12);
+      }
+      @media (max-width: 959px) {
+        height: 26rem;
+      }
+    }
+
+    &:before {
+      background: rgba(0,0,0,0.6);
+    }
+
+    &:after {
+      background: white;
+      background-image: url('../img/summit__background.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+  }
+}
+
+/*
+ *section contactus
+ */
+.section--contact {
+  padding: 0;
+
+  .section__body .column--6-12 {
+    @media (min-width: 560px) {
+      width: 50%;
+      float: left;
+    }
+
+    @media (max-width: 559px) {
+      .media {
+        margin-bottom: $line-height * 1rem;
+      }
+
+      .media-object {
+        min-width: 5rem;
+        text-align: center;
+      }
+    }
+  }
+
+  .section__header,
+  .section__body,
+  .section__footer {
+    padding: 0 4rem;
+  }
+
+  .section__header {
+    text-align: left !important;
+    padding-top: 4rem;
+
+    hr {
+      margin-left: 0;
+    }
+  }
+
+  .section__body {
+    padding-bottom: 4rem;
+  }
+
+  .section__footer {
+    padding-bottom: 4rem;
+  }
+
+  .icon {
+    height: 3rem;
+  }
+
+}
+
+/*
+ *advisor
+ */
+.advisor {
+  position: relative;
+  height: 16rem;
+  overflow: hidden;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @media (max-width: 959px) {
+    margin-bottom: $line-height * 1rem;
+  }
+
+  &--shelly-kapoor-collins {
+     background-image: url('../img/collins_GSE.jpg');
+     background-position: right center;
+  }
+
+  &--cameron-yuill {
+     background-image: url('../img/advisor__cameron-yuill.jpg');
+     background-position: -1px center;
+  }
+
+  &--alexandra-wilkis-wilson {
+     background-image: url('../img/advisor__alexandra-wilkis-wilson.jpg');
+  }
+
+  &--alison-pincus {
+     background-image: url('../img/advisor__alison-pincus.jpg');
+  }
+
+  &--reema-khan {
+     background-image: url('../img/advisor__reema-khan.jpg');
+  }
+}
+
+.advisor__avatar {
+  position: relative;
+  z-index: 20;
+}
+
+.advisor__name {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 40;
+
+  a {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 0.8rem 1.2rem;
+    transition: background-color 0.2s ease-in-out;
+
+    &:hover {
+      background-color: rgba(0,0,0,0.6);
+    }
+  }
+
+  span {
+    display: block;
+    text-transform: capitalize;
+  }
+
+  small {
+    font-size: 70%;
+    letter-spacing: 0.15em;
+  }
+}
+
+
+/*
+ *media
+ */
+.media {
+  display: flex;
+}
+
+.media-body {
+  padding-left: $line-height*1rem;
+}
+
+/*
+ *google-map
+ */
+.google-map__wrapper {
+  position: relative;
+}
+
+.google-map {
+
+  &,
+  iframe {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+/*
+ *slider
+ */
+@import "swiper";
+
+/*
+ *slider buttons
+ */
+.swiper-button-next,
+.swiper-button-prev {
+  transition: opacity 0.25s ease-in-out;
+  opacity: 0.5;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}

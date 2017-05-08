@@ -1,0 +1,65 @@
+/*
+ *typography
+ */
+$line-height: 1.4;
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: $line-height;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+small {
+  font-size: 80%;
+}
+
+strong {
+  font-weight: 700;
+}
+
+em {
+  font-style: italic;
+}
+
+p {
+  margin-bottom: $line-height*1rem;
+}
+
+hr {
+  border: 0 none;
+  height: 1px;
+  width: 5rem;
+  background-color: currentColor;
+  margin: $line-height*1rem 0;
+}
+
+.mt1 {
+  margin-top: $line-height*1rem !important;
+}
+
+.mb1 {
+  margin-bottom: $line-height*1rem !important;
+}
+
+.mb0 {
+  margin-bottom: 0 !important;
+}
+
+.text-red {
+  color: #eb1c24 !important;//red
+}
