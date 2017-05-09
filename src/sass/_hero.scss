@@ -2,23 +2,24 @@
  *hero
  */
 .hero {
-  background-image: url('../img/hero__background.jpg');
+  //background-image: url('../img/hero__background.jpg');
+  background-image: url('../img/ventures__bg.png');
   background-position: center top;
-  background-color: black;
+  background-color: white;
   height: 100%;
   position: relative;
 
-  &:before {
-    content: "";
-    display: block;
-    background: rgba(0,0,0,0.4);
-    background: linear-gradient(to right, rgba(0,0,0,0.8) , rgba(0,0,0,0.0));
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-  }
+  //&:before {
+    //content: "";
+    //display: block;
+    //background: rgba(0,0,0,0.4);
+    //background: linear-gradient(to right, rgba(0,0,0,0.8) , rgba(0,0,0,0.0));
+    //position: absolute;
+    //top: 0;
+    //left: 0;
+    //height: 100%;
+    //width: 100%;
+  //}
 }
 
 .hero__container {
@@ -30,13 +31,13 @@
   top: 50%;
   left: 0;
   transform: translateY(-50%);
-  color: white;
+  color: inherit;
   padding-left: 3rem;
 
   .primary {
     font-size: 5rem;
     font-weight: 700;
-    color: #eb1c24;//red
+    color: $blue; // blue
     text-transform: uppercase;
     transition: font-size 0.2s ease-in-out;
 
@@ -64,7 +65,7 @@
   padding: 2rem 0;
   text-align: center;
   color: white;
-  background-color: #eb1c24;// red
+  background-color: $blue; // blue
   font-weight: 300;
 }
 

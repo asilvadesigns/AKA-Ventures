@@ -1,4 +1,5 @@
 $grid-gutter : 1rem;
+$blue: #1977cc;
 
 /*
  *helpers
@@ -34,9 +35,9 @@ body, .smooth-container { scroll-behavior: smooth }
   position: relative;
   overflow: hidden;
 
-  @media (min-width: 960px) {
-    min-height: 100%;
-  }
+  //@media (min-width: 960px) {
+  //min-height: 100%;
+  //}
 }
 
 .section__wrapper {
@@ -51,7 +52,7 @@ body, .smooth-container { scroll-behavior: smooth }
 .section__header {
   text-align: center;
   margin-bottom: 4rem;
-  color: #163b4d;//blue
+  color: $blue;//blue
 
   hr {
     margin-left: auto;
@@ -68,7 +69,7 @@ body, .smooth-container { scroll-behavior: smooth }
 .section__subheader {
 
   .primary {
-    color: #eb1c24;//red
+    color: $blue;//red
     font-size: 1.4rem;
   }
 }
@@ -103,10 +104,10 @@ body, .smooth-container { scroll-behavior: smooth }
 /*
  *section shatterfund
  */
-.section--thefund {
-  @media (max-width: 959px) {
-    padding-top: 30rem;
-  }
+.section--aboutus {
+  //@media (max-width: 959px) {
+  //  padding-top: 30rem;
+  //}
 
   .section__header {
     color: #163b4d;//blue
@@ -119,29 +120,29 @@ body, .smooth-container { scroll-behavior: smooth }
     }
   }
 
-  .section__background {
-    &:before,
-    &:after {
-      @media (min-width: 960px) {
-        width: 50%;
-      }
-      @media (max-width: 959px) {
-        height: 26rem;
-      }
-    }
+  //.section__background {
+  //&:before,
+  //&:after {
+  //@media (min-width: 960px) {
+  //width: 50%;
+  //}
+  //@media (max-width: 959px) {
+  //height: 26rem;
+  //}
+  //}
 
-    &:before {
-      background: linear-gradient(to right, rgba(0,0,0,0.0), white);
-    }
+  //&:before {
+  //background: linear-gradient(to right, rgba(0,0,0,0.0), white);
+  //}
 
-    &:after {
-      background: white;
-      background-image: url('../img/shatterfund__background.jpg');
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center center;
-    }
-  }
+  //&:after {
+  //background: white;
+  //background-image: url('../img/shatterfund__background.jpg');
+  //background-size: cover;
+  //background-repeat: no-repeat;
+  //background-position: center center;
+  //}
+  //}
 }
 
 /*
@@ -193,136 +194,6 @@ body, .smooth-container { scroll-behavior: smooth }
 
   .icon {
     height: 6rem;
-  }
-}
-
-/*
- *section whereweinvest
- */
-.section--whereweinvest {
-  background-color: #f2f2f2;
-
-  @media (max-width: 959px) {
-    .container {
-      max-width: 30rem;
-    }
-
-    .column--7-12 {
-      margin-bottom: ($line-height * 4) * 1rem;
-    }
-  }
-
-  .svg {
-    text-align: center;
-  }
-
-  .icon {
-    max-width: 20rem;
-  }
-}
-
-/*
- *section portfolio
- */
-.section--portfolio {
-
-  @media (min-width: 960px) {
-    .column {
-      vertical-align: middle;
-      float: none;
-      display: inline-block;
-      margin-right: -5px;
-    }
-  }
-
-  .svg {
-    text-align: center;
-  }
-
-  .icon {
-    height: 4rem;
-  }
-
-  .icon--urbansitter { height: 10rem; }
-  .icon--glamsquad { height: 9rem; }
-  .icon--barnraiser { height: 5.5rem; }
-  .icon--kraus { height: 3rem; }
-  .icon--tmn { height: 3rem; }
-  .icon--onsecondthought { height: 3rem; }
-
-  @media (max-width: 959px) {
-    .icon--urbansitter,
-    .icon--glamsquad {
-      margin-top: ($line-height * 2) * -1rem;
-    }
-    .icon--barnraiser {
-      //margin-top: ($line-height * 2) * -1rem;
-    }
-    .icon--kraus {
-      margin-top: ($line-height * 2) * 1rem;
-    }
-    .icon--tmn {
-      margin-top: ($line-height * 2) * 1rem;
-    }
-    .icon--onsecondthought {
-      margin-top: ($line-height * 2) * 1rem;
-    }
-  }
-}
-
-/*
- *section quotes
- */
-.section--quotes {
-  background-image: url('../img/quotes__background.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-
-  .section__background {
-    &:before {
-      background-color: rgba(0,0,0,0.8);
-    }
-  }
-
-  blockquote {
-    color: white;
-    position: relative;
-
-    &:after,
-    &:before {
-      position: relative;
-      content: "";
-      display: block;
-      height: 2rem;
-      background-repeat: no-repeat;
-    }
-
-    &:before {
-      top: 1rem;
-      left: -5rem;
-      background-image: url(../img/leftquote.svg);
-      height: 3rem;
-    }
-
-    &:after {
-      right: -100%;
-      bottom: 1rem;
-      background-image: url('../img/rightquote.svg');
-    }
-
-    cite {
-      display: block;
-      font-weight: 700;
-      text-transform: uppercase;
-      color: #eb1c24;//red
-      margin-top: $line-height * 1rem;
-    }
-  }
-
-  .swiper-slide blockquote {
-    max-width: 40rem;
-    margin: 0 auto;
-    padding: 0 5rem;
   }
 }
 
@@ -396,7 +267,7 @@ body, .smooth-container { scroll-behavior: smooth }
   }
 
   .section__header {
-    color: #eb1c24;//red
+    color: $blue;//red
     text-align: left !important;
     padding-top: 4rem;
 
@@ -550,26 +421,15 @@ body, .smooth-container { scroll-behavior: smooth }
     margin-bottom: $line-height * 1rem;
   }
 
-  &--shelly-kapoor-collins {
-     background-image: url('../img/collins_GSE.jpg');
-     background-position: right center;
+  &--aaron-drew {
+    //background-image: url('../img/');
+    background-image: url('http://placehold.it/1280x720');
+    background-position: right center;
   }
 
-  &--cameron-yuill {
-     background-image: url('../img/advisor__cameron-yuill.jpg');
-     background-position: -1px center;
-  }
-
-  &--alexandra-wilkis-wilson {
-     background-image: url('../img/advisor__alexandra-wilkis-wilson.jpg');
-  }
-
-  &--alison-pincus {
-     background-image: url('../img/advisor__alison-pincus.jpg');
-  }
-
-  &--reema-khan {
-     background-image: url('../img/advisor__reema-khan.jpg');
+  &--michael-kapoor {
+    background-image: url('http://placehold.it/1280x720');
+    background-position: right center;
   }
 }
 

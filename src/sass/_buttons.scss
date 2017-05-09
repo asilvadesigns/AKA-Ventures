@@ -1,14 +1,14 @@
 .btn {
   color: white;
-  border: 1px solid #eb1c24;
+  border: 1px solid $blue;
   border-radius: 4px;
-  background-color: #eb1c24;//red
+  background-color: $blue;//red
   padding: 0.125rem 0.4rem 0.2rem;
   font-size: 85%;
   cursor: pointer;
 
   &:hover {
-    background-color: mix(white, #eb1c24, 20%);
+    background-color: mix(white, $blue, 20%);
   }
 }
 
