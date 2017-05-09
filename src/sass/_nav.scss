@@ -42,7 +42,7 @@
   &.is-open {
     .nav__mobile-menu__toggle {
       color: white !important;
-      background-color: #163b4d;//blue
+      background-color: $blue;//blue
     }
     .nav__mobile-menu__menu {
       opacity: 1 !important;
@@ -105,7 +105,7 @@
       right: 0;
       pointer-events: none;
       min-width: 200px;
-      background-color: #163b4d;//blue
+      background-color: $blue;//blue
     }
 
     .nav__link {
@@ -115,7 +115,7 @@
 
       &.is-inview,
       &:hover {
-        background-color: mix(black, #163b4d, 20%);//dark blue
+        background-color: mix(black, $blue, 20%);//dark blue
       }
     }
   }
